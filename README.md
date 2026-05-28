@@ -77,7 +77,16 @@ The easiest way to start the Dify server is through [Docker Compose](docker/dock
 cd dify
 cd docker
 cp .env.example .env
-docker compose up -d
+sudo docker compose up -d
+456852
+sudo docker compose down
+
+# 查看服务状态
+sudo docker compose ps
+# 查看运行中的容器
+sudo docker ps
+# 停止容器（发送 SIGTERM，10 秒后发送 SIGKILL）
+sudo docker stop <容器ID或名称>
 ```
 
 After running, you can access the Dify dashboard in your browser at [http://localhost/install](http://localhost/install) and start the initialization process.
